@@ -50,5 +50,12 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           script: |
+            # Pull the latest image
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/devops_project:latest
-            docker run -d -p 8080 --name devops_project ${{ secrets.DOCKERHUB_USERNAME }}/devops_project:latest
+
+            # Stop and remove any existing container with the name 'devops_project'
+            docker stop devops_project || true
+            docker rm devops_project || true
+
+            # Run the new container
+            docker run -d -p 8080:8080 --name devops_project ${{ secrets.DOCKERHUB_USERNAME }}/devops_project:latest
