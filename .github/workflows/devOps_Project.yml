@@ -49,7 +49,6 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
           script: |
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/devops_project:latest
             docker run -d -p 8080 --name devops_project ${{ secrets.DOCKERHUB_USERNAME }}/devops_project:latest
