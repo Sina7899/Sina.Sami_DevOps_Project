@@ -1,0 +1,25 @@
+{
+  "name": "sina.sami_devops_project_github_repository",
+  "version": "1.0.0",
+  "description": "DevOps Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sina7899/Sina.Sami_DevOps_Project.git"
+  },
+  "keywords": [
+    "DevOps"
+  ],
+  "author": "Sina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sina7899/Sina.Sami_DevOps_Project/issues"
+  },
+  "homepage": "https://github.com/Sina7899/Sina.Sami_DevOps_Project#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
